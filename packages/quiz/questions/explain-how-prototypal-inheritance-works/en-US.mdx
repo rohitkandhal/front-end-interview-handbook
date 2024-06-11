@@ -27,6 +27,9 @@ function Dog(name) {
 // Set the child object's prototype to be the parent's prototype.
 Object.setPrototypeOf(Dog.prototype, Animal.prototype);
 
+// Fix the constructor property
+Dog.prototype.constructor = Dog;
+
 // Add a method to the child object's prototype.
 Dog.prototype.bark = function () {
   console.log('Woof!');
